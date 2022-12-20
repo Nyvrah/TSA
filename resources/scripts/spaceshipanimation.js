@@ -4,18 +4,18 @@ const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeig
 window.addEventListener('scroll', function(){
     var value = window.scrollY;
     var yScroll = value/vh;
-    if (yScroll < 3){
+    if (yScroll <= 2){
         modelViewer.style.left = "25%";
-        if (yScroll < 1){
-            modelViewer.cameraOrbit = `45deg 70deg 100%`;
+        if (yScroll <= 0){
+            modelViewer.cameraOrbit = `35deg 70deg 100%`;
         }
-        else if (yScroll < 2){
+        else if (yScroll <= 1){
             modelViewer.cameraOrbit = `90deg 0deg 100%`;
         }
-        else if (yScroll < 3){
+        else if (yScroll <= 2){
             modelViewer.cameraOrbit = `90deg 70deg 100%`;
         }
-        else if (yScroll < 4){
+        else if (yScroll <= 3){
             modelViewer.style.left = "25%";
             modelViewer.cameraOrbit = `0deg 70deg 100%`;
         }
